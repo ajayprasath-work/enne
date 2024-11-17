@@ -267,7 +267,7 @@ export default function Login() {
                 <p className="text-red-500 text-sm mt-1">{errors.rememberMe}</p>
               )}
               <div className="mt-3 lg:mt-5">
-                <Altcha ref={altchaRef} />
+                {/* <Altcha ref={altchaRef} /> */}
                 {errors.captcha && (
                   <p className="text-red-500 text-sm mt-1">{errors.captcha}</p>
                 )}

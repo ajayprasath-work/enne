@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { SubBanner } from "@/components/Herosection";
 import { useI18n, useScopedI18n } from '@/locales/client'

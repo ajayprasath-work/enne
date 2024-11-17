@@ -4,7 +4,7 @@ import { Data } from "./Data";
 import Image from "next/image";
 
 export const Detail = () => {
-    const Id = localStorage.getItem("id");
+    const Id = "1";
     const currentItem = Data.find((item) => item.id === Id);
 
     if (!currentItem) {

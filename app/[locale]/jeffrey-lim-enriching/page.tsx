@@ -7,14 +7,17 @@ import Blog_icon from "@/components/Blog_icon";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 export default function detail() {
-  const id = localStorage.getItem("id");
+  const [storedValue, setStoredValue] = useState<any>(1);
+
+ 
+  
 
   return (
     <>
     <Menu/>
       {Resources_data.map(
         (item) =>
-          item.id === id && (
+          item.id === storedValue && (
             <DetailBanner Bg_path={item.banner_img_path} title={item.title} />
           )
       )}
@@ -100,7 +103,7 @@ export default function detail() {
             <div className="flex">
             {
                 Resources_data.map((items) =>(
-                  items.id === id && items.links && <Blog_icon  links= {items.links}/>
+                  items.id === storedValue && items.links && <Blog_icon  links= {items.links}/>
                 ))
               }
             </div>

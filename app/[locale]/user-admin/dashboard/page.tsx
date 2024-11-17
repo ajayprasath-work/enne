@@ -6,7 +6,6 @@ import ChartOverview from "../components/Chart";
 import Header from "../components/Header";
 
 export default function ForgetPassword() {
-  const language = localStorage.getItem('Language');
   
   return (
     <>
@@ -42,7 +41,7 @@ export default function ForgetPassword() {
                 <div className="self-stretch text-[#043156] md:text-lg lg:text-xs font-medium font-['Poppins'] leading-none tracking-tight">Sent</div>
               </div>
             </div>
-            <a href={`${language}user-admin/Reports`} className="mt-2 md:mt-2 lg:mt-auto">
+            <a href={`user-admin/Reports`} className="mt-2 md:mt-2 lg:mt-auto">
               <button className="w-full bg-light-250 py-3 text-primary text-base md:text-2xl rounded-lg border border-[#E7F7FA]">Show all</button>
             </a>
           </div>

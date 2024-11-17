@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
  
 export default function detail() {
-  const id = localStorage.getItem("id");
+  const id = "1";
 
   return (
     <>

@@ -46,7 +46,7 @@ export default function Card(){
 }
 
 export const DetailCard = () => {
-    const Id = localStorage.getItem("id");
+    const Id = "1";
 
     const ImageCards = Data.map((item) => (
         item.id === Id ?(

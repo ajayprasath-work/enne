@@ -1,7 +1,7 @@
 import { AboutSvg } from '@/public/assets/icon/Icon'
 import React from 'react'
 import Image from 'next/image'
-import { useScopedI18n } from 'next-intl'
+import { useScopedI18n } from '@/locales/client'
 
 function About() {
   const tindex = useScopedI18n("IndexPage");

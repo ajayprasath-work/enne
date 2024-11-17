@@ -5,13 +5,15 @@ import { DetailCard } from "@/components/Card";
 import { Detail } from "@/components/Detail";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
+import { getStaticParams } from "@/locales/server";
 
 export default function EnneagramDetail() {
 
     const [bannerText, setBannerText] = useState('');
 
     useEffect(() => {
-        const Id = localStorage.getItem('id');
+        var Id:any=1 ;
+       
 
         if (Id) {
             const matchedItem = Data.find(item => item.id === Id);
