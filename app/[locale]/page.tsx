@@ -10,7 +10,7 @@ export default function Page() {
     <div>
  
       {/* Both are equivalent: */}
-      <p>ji</p>
+      <p>{scopedT("copyright")}</p>
  
      
     </div>
