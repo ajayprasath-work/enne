@@ -26,7 +26,7 @@ export default function Enneagram() {
       }, []);
       function handleClick(Id: string){
         localStorage.setItem("id",Id);
-        const url = `${language}enneagram-detail`;
+        const url = `enneagram-detail`;
         window.open(url, '_blank');
       };
     return (

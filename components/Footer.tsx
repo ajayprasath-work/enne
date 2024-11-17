@@ -164,7 +164,7 @@ function Footer() {
             </div>
             <div className="flex flex-col gap-3 mt-5">
               <a
-                href={`${language}privacy-policy`}
+                href={`privacy-policy`}
                 title="Privacy Policy"
                 className="text-lg md:font-medium tracking-xl text-white relative group w-fit"
               >
@@ -172,7 +172,7 @@ function Footer() {
                 <div className="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-500 ease-in-out group-hover:w-full"></div>
               </a>
               <a
-                href={`${language}terms-and-conditions`}
+                href={`terms-and-conditions`}
                 title="Terms of Service"
                 className="text-lg md:font-medium tracking-xl text-white relative group w-fit"
               >
@@ -180,7 +180,7 @@ function Footer() {
                 <div className="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-500 ease-in-out group-hover:w-full"></div>
               </a>
               <a
-                href={`${language}terms-of-use`}
+                href={`terms-of-use`}
                 title="Terms of Service"
                 className="text-lg md:font-medium tracking-xl text-white relative group w-fit"
               >

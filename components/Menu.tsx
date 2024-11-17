@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ContactModal from "./ContactModal";
 import { usePathname, useRouter } from "next/navigation";
-import { useI18n, useScopedI18n } from '@/locales/client'
+import { useI18n, useScopedI18n,useChangeLocale ,useCurrentLocale} from '@/locales/client'
 
 type LanguageProps = {
   slug: string;
@@ -37,22 +37,23 @@ function Menu() {
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageProps>(LanguageData[0]);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const [openval,setOpenval] = useState<boolean>(false);
+  const changeLocale = useChangeLocale()
+  const locale = useCurrentLocale()
   
   useEffect(() => {
-    const currentSlug = PathName.split('/')[1]; // Get the slug from the pathname
-    const currentLanguage = LanguageData.find(language => language.slug === currentSlug); // Find the language based on the slug
+    const currentLanguage = LanguageData.find(language => language.slug === locale); // Find the language based on the slug
     if (currentLanguage) {
       setSelectedLanguage(currentLanguage); // Set the selected language if found
     }
-  }, [PathName]);
+  }, [locale]);
   const handleLanguageChange = (language: LanguageProps) => {
     setSelectedLanguage(language);
     setDropdownOpen(false);
-
+    changeLocale(language.slug as any)
     // Update the URL to reflect the selected language
-   const newPath = PathName.replace(/\/[a-z]{2}\/?/, `/${language.slug}/`); // Replace the language slug in the URL
-   localStorage.setItem("Language", newPath );
-   router.push(newPath); 
+  //  const newPath = PathName.replace(/\/[a-z]{2}\/?/, `/${language.slug}/`); // Replace the language slug in the URL
+  //  localStorage.setItem("Language", newPath );
+  //  router.push(newPath); 
  };
  
 

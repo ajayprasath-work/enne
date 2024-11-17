@@ -1,9 +1,10 @@
 "use client";
+import dynamic from "next/dynamic";
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Altcha from "@/components/Altcha";
 import { Eye, EyeSvg } from "@/public/assets/icon/Icon";
+const Altcha = dynamic(() => import('@/components/Altcha'), { ssr: false });
 
 interface FormErrors {
   email: string;
@@ -263,7 +264,7 @@ export default function Login() {
                 <p className="text-red-500 text-sm mt-1">{errors.rememberMe}</p>
               )}
               <div className="mt-3 lg:mt-5">
-                {/* <Altcha ref={altchaRef} /> */}
+                <Altcha ref={altchaRef} />
                 {errors.captcha && (
                   <p className="text-red-500 text-sm mt-1">{errors.captcha}</p>
                 )}

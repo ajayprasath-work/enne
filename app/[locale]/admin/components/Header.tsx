@@ -46,10 +46,10 @@ function Header() {
             </div>
             <div className=" lg:flex hidden items-center gap-3">
               <a
-                href={`${language}admin/dashborad`}
+                href={`dashborad`}
                 title="home"
                 className={`flex items-center ${
-                  pathname == `${language}admin/dashborad`
+                  pathname == `dashborad`
                     ? "text-white bg-red-150 border-darkBlue-100"
                     : ""
                 } text-primary gap-2 border border-light-550 hover:border-light-250 bg-light-250 duration-500 rounded-5xl hover:text-white hover:bg-red-150 py-2.5 px-5`}
@@ -60,10 +60,10 @@ function Header() {
                 <div className="text-base font-medium">Dashboard</div>
               </a>
               <a
-                href={`${language}admin/users`}
+                href={`users`}
                 title="home"
                 className={`flex items-center ${
-                  pathname ==`${language}admin/users`
+                  pathname ==`users`
                     ? "text-white bg-red-150 border-darkBlue-100"
                     : ""
                 } text-primary gap-2 border border-light-550 hover:border-light-250 bg-light-250 duration-500 rounded-5xl hover:text-white hover:bg-red-150 py-2.5 px-5`}
@@ -74,10 +74,10 @@ function Header() {
                 <div className="text-base font-medium">Users</div>
               </a>
               <a
-                href={`${language}admin/companies`}
+                href={`companies`}
                 title="home"
                 className={`flex items-center ${
-                  pathname ==`${language}admin/companies`
+                  pathname ==`companies`
                     ? "text-white bg-red-150 border-darkBlue-100"
                     : ""
                 } text-primary gap-2 border border-light-550 hover:border-light-250 bg-light-250 duration-500 rounded-5xl hover:text-white hover:bg-red-150 py-2.5 px-5`}
@@ -88,10 +88,10 @@ function Header() {
                 <div className="text-base font-medium">Companies</div>
               </a>
               <a
-                href={`${language}admin/credits`}
+                href={`credits`}
                 title="home"
                 className={`flex items-center ${
-                  pathname ==`${language}admin/credits`
+                  pathname ==`credits`
                     ? "text-white bg-red-150 border-darkBlue-100"
                     : ""
                 } text-primary gap-2 border border-light-550 hover:border-light-250 bg-light-250 duration-500 rounded-5xl hover:text-white hover:bg-red-150 py-2.5 px-5`}
@@ -102,7 +102,7 @@ function Header() {
                 <div className="text-base font-medium">Credits</div>
               </a>
               <a
-                href={`${language}admin/Reports`}
+                href={`Reports`}
                 title="home"
                 className={`flex items-center ${
                   pathname ==`${language}admin/Reports`
