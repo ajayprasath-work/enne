@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --Poppins : "Poppins", sans-serif ;
+    --Roboto : "Roboto", serif;
+  }
+  body::-webkit-scrollbar {
+    width: 6px;
+    background: #ddd;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #043156;
+}
+/* styles.css */
+.video-modal {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  background-color: white;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+.slide-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+.pagination-container {
+  display: flex;
+  list-style-type: none;
+  gap: 12px;
+}
+.pagination-container .pagination-item {
+  display: flex;
+width: 60px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+border-radius: 5px;
+border: 0.5px solid rgba(0, 0, 0, 0.20);
+overflow: hidden;
+color: #000;
+text-align: center;
+text-overflow: ellipsis;
+/* Ennealysis Font size/ennealysis - subtitle */
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: 0.32px;
+}
+.pagination-container .pagination-item.dots:hover {
+  background-color: transparent;
+  cursor: default;
+}
+.pagination-container .pagination-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+.pagination-container .pagination-item.selected {
+  background-color: rgba(0, 0, 0, 0.08);
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+
+}
+.pagination-container .pagination-item .arrow::before {
+  position: relative;
+ /* top: 3pt;
+  Uncomment this to lower the icons as requested in comments*/
+  content: '';
+ /* By using an em scale, the arrows will size with the font */
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+}
+.pagination-container .pagination-item .arrow.left {
+  transform: rotate(-135deg) translate(-50%);
+}
+.pagination-container .pagination-item .arrow.right {
+  transform: rotate(45deg);
+}
+.pagination-container .pagination-item.disabled {
+  pointer-events: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+
+}
+.pagination-container .pagination-item.disabled .arrow::before {
+  border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+  border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+}
+.pagination-container .pagination-item.disabled:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+table th{
+  position:sticky;
+  top: 0px;
+}
+
+
+
+thead tr th {
+padding: 22px  16px;
+align-items: center;
+gap: 12px;
+  font-weight: 500;
+  text-align: left;
+  background-color: #fafafa;
+  color: #000;
+text-overflow: ellipsis;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 160%; 
+letter-spacing: 0.28px;
+}
+
+
+
+td {
+padding: 16px;
+align-items: center;
+gap: 12px;
+overflow: hidden;
+color: #000;
+text-overflow: ellipsis;
+/* Ennealysis Font size/ennealysis - body3 */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 160%; /* 22.4px */
+letter-spacing: 0.28px;
+
+}
+
+.pagination-bar {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+
+.card-content{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 4px;
+}
+
+.card-title{
+  color: #041B37;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: 0.32px;
+}
+
+.card-description{
+  color: #000;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 33.6px */
+letter-spacing: 0.48px;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+.scroll_1::-webkit-scrollbar {
+  width:6px;
+  background:red;
+}
+.scroll_1::-webkit-scrollbar-track {
+  background: #fff; 
+}
+.scroll_1::-webkit-scrollbar-thumb {
+  background: #043156; 
+  border-radius:30px;
+}

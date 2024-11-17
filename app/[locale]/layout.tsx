@@ -4,7 +4,7 @@ import { I18nProviderClient } from '../../locales/client'
 import { getStaticParams } from '../../locales/server'
 import { setStaticParamsLocale } from 'next-international/server'
 import type { Metadata } from "next";
-
+import './globals.css'
 export function generateStaticParams() {
     return getStaticParams()
   }
@@ -19,14 +19,14 @@ export default async function Layout({ params, children }: { params: Promise<{ l
   setStaticParamsLocale(locale)
 
   return (
-    <html lang={locale}>
-      <body>
+
+   
+    <html lang={locale} className="text-[3.8vw] md:text-[1.3vw] lg:text-[1.6vh] xl:text-[1.8vh] 2xl:text-[0.85vw]">
+    <body className="font-poppins">
     <I18nProviderClient locale={locale}>
       {children}
     </I18nProviderClient>
     </body>
-    </html>
-
-    
+    </html> 
   )
 }
